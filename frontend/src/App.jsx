@@ -90,6 +90,12 @@ function TodoList() {
                 >
                   {todo.completed ? 'Undo' : 'Done'}
                 </button>
+                <button
+                  className="btn-action"
+                  onClick={() => navigate(`/todo/${todo.id}`)}
+                >
+                  View
+                </button>
                 <button className="btn-action delete" onClick={() => handleDelete(todo.id)}>Delete</button>
               </div>
             </li>
