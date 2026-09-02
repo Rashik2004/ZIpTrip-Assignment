@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation, useEffect } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
 
 function TodoList() {
@@ -62,6 +63,7 @@ function TodoList() {
           <form onSubmit={handleCreate} className="form-group">
             <input
               type="text"
+              className="input-field"
               value={newTodo}
               onChange={(e) => setNewTodo(e.target.value)}
               placeholder="What needs to be done?"
